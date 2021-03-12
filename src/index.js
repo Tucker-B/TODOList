@@ -1,12 +1,18 @@
 console.log("Running inside /src/ via index.js");
 import {Project} from "./project.js"
+import {TodoList} from "./todoList"
+import {TodoItem} from "./todoItem"
+
+let japaneseTodoItemOne = new TodoItem("Do Listening Practice", 2, "1 Week", "Today");
+let japaneseTodoItemTwo = new TodoItem("Do Kanji Practice", 3, "Today", "Today");
+let japaneseTodoList = new TodoList("Japanese");
+
+japaneseTodoList.addTodoItem(japaneseTodoItemOne);
+japaneseTodoList.addTodoItem(japaneseTodoItemTwo);
+
+console.log(japaneseTodoList);
 
 
-let japanese = new Project("Japanese");
-console.log(`Japanese Project Name: ${japanese.name}`);
-
-let programming = new Project("Programming");
-console.log(`Programming Project Name: ${programming.name}`);
 // 1. 'Todo' items will be objects dynamically added to list via site
 
 // 2. Think of properties todo object will have

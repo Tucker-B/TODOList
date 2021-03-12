@@ -1,6 +1,7 @@
 class Project {
-    constructor(name) {
+    constructor(name, createdDate) {
         this.name = name;
+        this.createdDate = createdDate;
     }
 }
 
