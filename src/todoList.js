@@ -1,10 +1,5 @@
-let todoList = (todoListName) => {
-    // Constructor
-    const todoList = {};
-    
-    todoList.name = todoListName;
+const TodoList = function(name) {
+    this.name = name;
+};
 
-    return todoList;
-}
-
-export {todoList}
+export {TodoList}

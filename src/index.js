@@ -1,5 +1,12 @@
 console.log("Running inside /src/ via index.js");
+import {Project} from "./project.js"
 
+
+let japanese = new Project("Japanese");
+console.log(`Japanese Project Name: ${japanese.name}`);
+
+let programming = new Project("Programming");
+console.log(`Programming Project Name: ${programming.name}`);
 // 1. 'Todo' items will be objects dynamically added to list via site
 
 // 2. Think of properties todo object will have
@@ -24,3 +31,5 @@ console.log("Running inside /src/ via index.js");
 // Module: AccessList
 // Module: TODO_Item
 // Module: Project. Class too
+
+// Project -> List -> TODO

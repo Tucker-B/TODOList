@@ -1,10 +1,5 @@
-let project = (projectName) => {
-    // Constructor
-    const project = {};
-    
-    project.name = projectName;
+const Project = function(name) {
+    this.name = name;
+};
 
-    return project;
-}
-
-export {project}
+export {Project}

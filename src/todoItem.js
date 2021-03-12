@@ -1,10 +1,5 @@
-let todoItem = (todoItemName) => {
-    // Constructor
-    const todoItem = {};
-    
-    todoItem.name = todoItemName;
+const TodoItem = function(name) {
+    this.name = name;
+};
 
-    return todoItem;
-}
-
-export {todoItem}
+export {TodoItem}

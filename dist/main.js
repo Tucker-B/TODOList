@@ -1,1 +1,1 @@
-console.log("Running inside /src/ via index.js");
+(()=>{"use strict";const e=function(e){this.name=e};console.log("Running inside /src/ via index.js");let n=new e("Japanese");console.log(`Japanese Project Name: ${n.name}`);let o=new e("Programming");console.log(`Programming Project Name: ${o.name}`)})();
