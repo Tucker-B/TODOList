@@ -10,7 +10,7 @@ let japaneseTodoList = new TodoList("Japanese");
 japaneseTodoList.addTodoItem(japaneseTodoItemOne);
 japaneseTodoList.addTodoItem(japaneseTodoItemTwo);
 
-console.log(japaneseTodoList);
+console.log(japaneseTodoList.name);
 
 
 // 1. 'Todo' items will be objects dynamically added to list via site
@@ -30,12 +30,5 @@ console.log(japaneseTodoList);
 //      b.) Open a project & view All TODOs
 //      c.) Expand a single TODO to see/edit details
 //      d.) Delete a TODO
-
-
-// Class TODO_Item
-
-// Module: AccessList
-// Module: TODO_Item
-// Module: Project. Class too
 
 // Project -> List -> TODO
