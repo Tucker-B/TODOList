@@ -1,5 +1,7 @@
-const TodoItem = function(name) {
-    this.name = name;
-};
+class TodoItem {
+    constructor(name) {
+        this.name = name;
+    }
+}
 
 export {TodoItem}

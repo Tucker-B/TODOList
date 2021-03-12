@@ -1,5 +1,7 @@
-const TodoList = function(name) {
-    this.name = name;
-};
+class TodoList {
+    constructor(name) {
+        this.name = name;
+    }
+}
 
 export {TodoList}

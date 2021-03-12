@@ -1,5 +1,7 @@
-const Project = function(name) {
-    this.name = name;
-};
+class Project {
+    constructor(name) {
+        this.name = name;
+    }
+}
 
 export {Project}
