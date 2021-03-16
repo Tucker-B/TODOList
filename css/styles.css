@@ -1,0 +1,26 @@
+h1 {
+    font-size: xx-large;
+    text-align: center;
+
+    padding: 10px;
+}
+
+h2 {
+    font-size: large;
+    text-align: center;
+}
+
+i {
+    font-style: italic;
+}
+
+p {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#Project-Create-Button {
+    text-align: center;
+}

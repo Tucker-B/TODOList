@@ -18,4 +18,14 @@ class Project {
     }
 }
 
-export {Project}
+function createProjectForm() {
+
+    let container = document.querySelector(`#content`);
+
+    let formElement = document.createElement('form');
+
+    container.appendChild(formElement);
+
+}
+
+export {Project, createProjectForm}

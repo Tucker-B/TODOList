@@ -1,5 +1,5 @@
 console.log("Running inside /src/ via index.js");
-import {Project} from "./project.js"
+import {Project, createProjectForm} from "./project.js"
 import {TodoList} from "./todoList"
 import {TodoItem} from "./todoItem"
 
@@ -11,6 +11,20 @@ japaneseTodoList.addTodoItem(japaneseTodoItemOne);
 japaneseTodoList.addTodoItem(japaneseTodoItemTwo);
 
 console.log(japaneseTodoList.name);
+
+(function clickListener() {
+    let projectCreateButton = document.querySelector(`#Project-Create-Button`);
+
+    projectCreateButton.addEventListener('click', () => {
+
+        projectCreateButton.textContent = "Hello";
+
+        createProjectForm();
+
+    });
+
+
+})();
 
 // 4. Separate Application logic. & Separate that from DOM-related code
 
