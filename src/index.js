@@ -1,7 +1,13 @@
-console.log("Running inside /src/ via index.js");
 import {Project, createProjectForm} from "./project.js"
 import {TodoList} from "./todoList"
 import {TodoItem} from "./todoItem"
+
+// ** TODO TASKS **
+// 1. Finish createProjectForm() to create form
+// 2. Add Submit Button
+// 3. Create a project using information submitted
+// 4. Add ability to add lists to project
+// 5. Add ability to add todos to lists
 
 let japaneseTodoItemOne = new TodoItem("Do Listening Practice", 2, "1 Week", "Today");
 let japaneseTodoItemTwo = new TodoItem("Do Kanji Practice", 3, "Today", "Today");
@@ -22,16 +28,4 @@ console.log(japaneseTodoList.name);
         createProjectForm();
 
     });
-
-
 })();
-
-// 4. Separate Application logic. & Separate that from DOM-related code
-
-// 5. Functionality:
-//      a.) View All Projects
-//      b.) Open a project & view All TODOs
-//      c.) Expand a single TODO to see/edit details
-//      d.) Delete a TODO
-
-// Project -> List -> TODO
