@@ -1,3 +1,7 @@
+div {
+    margin: 20px;
+}
+
 h1 {
     font-size: xx-large;
     text-align: center;
@@ -8,10 +12,27 @@ h1 {
 h2 {
     font-size: large;
     text-align: center;
+    margin: 15px;
+}
+
+h2#title-subtext {
+    margin: 0px;
 }
 
 i {
     font-style: italic;
+}
+
+input {
+    margin-top: 5px;
+    margin-left: 40px;
+}
+
+label {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 p {

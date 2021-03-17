@@ -1,11 +1,8 @@
-import {Project, createProjectForm} from "./project.js"
+import {createProjectForm, createProject} from "./project.js"
 import {TodoList} from "./todoList"
 import {TodoItem} from "./todoItem"
 
 // ** TODO TASKS **
-// 1. Finish createProjectForm() to create form
-// 2. Add Submit Button
-// 3. Create a project using information submitted
 // 4. Add ability to add lists to project
 // 5. Add ability to add todos to lists
 
@@ -19,13 +16,20 @@ japaneseTodoList.addTodoItem(japaneseTodoItemTwo);
 console.log(japaneseTodoList.name);
 
 (function clickListener() {
+    // Creates form for new project once "Create a Project!" button is clicked
     let projectCreateButton = document.querySelector(`#Project-Create-Button`);
-
     projectCreateButton.addEventListener('click', () => {
 
-        projectCreateButton.textContent = "Hello";
-
+        // Creates form for new project
         createProjectForm();
 
+        // Creates project once the submit button is clicked
+        let projectFormSubmitButton = document.querySelector(`#Submit-Button`);
+        projectFormSubmitButton.addEventListener('click', () => {
+            // Creates project
+            createProject();
+        });
     });
+
+    
 })();
