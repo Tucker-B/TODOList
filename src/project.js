@@ -1,3 +1,5 @@
+import {createListForm, createList} from "./todoList"
+
 // Project class that will be used when creating projects on website
 class Project {
 
@@ -72,6 +74,17 @@ function createProject() {
     console.log(newProject.name);
 
     displayProject(newProject);
+    
+    let listCreateButton = document.querySelector(`#List-Create-Button`);
+    listCreateButton.addEventListener('click', () => {
+
+        createListForm(projectName);
+
+        let listSubmitButton = document.querySelector(`#List-Submit-Button`);
+        listSubmitButton.addEventListener('click', () => {
+            createList(projectName);
+        })
+    });
 }
 
 function displayProject(project) {
@@ -79,15 +92,24 @@ function displayProject(project) {
     // Content Div that holds everything in index.html
     let container = document.querySelector(`#content`);
 
+    // Div that will act as a box around the open project
     let projectDivElement = document.createElement(`div`);
     projectDivElement.id = `${project.name}-div`;
     projectDivElement.style.borderStyle = "solid";
     projectDivElement.style.borderWidth = "2px";
-
+    projectDivElement.style.borderRadius = "5px";
+    
+    // Header that will display the project's name
     let projectHeaderElement = document.createElement(`h2`);
     projectHeaderElement.textContent = project.name;
 
+    // Button that will add a list when clicked
+    let listCreateButton = document.createElement(`button`);
+    listCreateButton.id = "List-Create-Button";
+    listCreateButton.textContent = "Add List!";
+
     projectDivElement.appendChild(projectHeaderElement);
+    projectDivElement.appendChild(listCreateButton);
 
     container.appendChild(projectDivElement);
 
