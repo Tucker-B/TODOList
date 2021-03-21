@@ -1,8 +1,12 @@
 import {createProjectForm, createProject} from "./project.js"
 
 // ** TODO TASKS **
-// 4. Add ability to add lists to project
-// 5. Add ability to add todos to lists
+// 1. Fix bugs
+//     a. Cannot add todo items to any list other than the first one.
+//     b. Forms continue to be displayed even after submitting
+//     c. Todo Item property input boxes aren't clickable for half of the box
+// 2. Visual Overhaul to mimic other todolist apps
+// 3. Save input to local storage so that data persists upon multiple visits
 
 (function clickListener() {
     // Creates form for new project once "Create a Project!" button is clicked
