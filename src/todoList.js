@@ -1,3 +1,5 @@
+import {createTodoItemForm, createTodoItem} from "./todoItem"
+
 class TodoList {
 
     // Array that will hold all todo items related to specific list
@@ -60,29 +62,50 @@ function createListForm(projectName) {
 }
 
 function createList(projectName) {
-        let formData = document.querySelector(`#List-Form`);
-        let listName = formData[0].value;
-    
-        let newList = new TodoList(listName);
-    
-        console.log("New list successfully created. Below is the name of the list:");
-        console.log(newList.name);
+    let formData = document.querySelector(`#List-Form`);
+    let listName = formData[0].value;
 
-        displayList(newList, projectName);
+    let newList = new TodoList(listName);
+
+    console.log("New list successfully created. Below is the name of the list:");
+    console.log(newList.name);
+
+    displayList(newList, projectName);
+
+    let addTodoItemButton = document.querySelector(`#${newList.name}-add-todo-button`);
+
+    addTodoItemButton.addEventListener('click', () => {
+        createTodoItemForm(newList.name);
+
+        let todoSubmitButton = document.querySelector(`#Todo-Submit-Button`);
+        todoSubmitButton.addEventListener('click', () => {
+            createTodoItem(newList.name);
+        })
+    });
 }
 
 function displayList(todoList, projectName) {
 
+    // Project Div
     let container = document.querySelector(`#${projectName}-div`);
 
+    // Div surrounding list
     let listDiv = document.createElement(`div`);
     listDiv.id = `${todoList.name}-div`;
 
+    // Name of List
     let listHeader = document.createElement(`h3`);
     listHeader.id = todoList.name;
     listHeader.textContent = todoList.name;
 
+    // Add Todo Item Button
+    let addTodoItemButton = document.createElement(`button`);
+    addTodoItemButton.id = `${todoList.name}-add-todo-button`;
+    addTodoItemButton.textContent = "Add Todo To List!";
+
+    // Appending all child elements to list div then list div to project div
     listDiv.appendChild(listHeader);
+    listDiv.appendChild(addTodoItemButton);
     container.appendChild(listDiv);
 
 }
